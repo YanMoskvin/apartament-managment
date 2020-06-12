@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Логин</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/root.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth">
+        <input type="text" placeholder="Логин">
+        <input type="password" placeholder="Пароль">
+        <button type="button">Войти</button>
+        <label class="auth-or">или</label>
+        <a href="https://oauth.vk.com/authorize?client_id=7508903&redirect_uri=http://localhost:5000/api/auth/vk&response_type=code" class="auth-vk">
+            <img src="../static/images/vk-1.svg" width="50" height="50">
+        </a>
+    </div>
+</body>
+</html>
