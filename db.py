@@ -3,6 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from config import DB
 from entities.complaint import Complaint
 from entities.user import User
+from entities.advert import Advert
 
 db = create_engine(DB)
 Session = sessionmaker(db)
@@ -28,3 +29,9 @@ def get_user(vk_id):
     user = session.query(User).filter_by(vk_id=str(vk_id)).first()
     session.close()
     return user
+
+def get_adverts():
+    session = Session()
+    adverts = session.query(Advert)
+    session.close()
+    return adverts

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Логин</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles/index.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/root.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/root.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,8 +13,9 @@
         <input type="password" placeholder="Пароль">
         <button type="button">Войти</button>
         <label class="auth-or">или</label>
+{#        <a href="https://oauth.vk.com/authorize?client_id=7508903&redirect_uri=http://116.203.105.221/api/auth/vk&response_type=code" class="auth-vk">#}
         <a href="https://oauth.vk.com/authorize?client_id=7508903&redirect_uri=http://localhost:5000/api/auth/vk&response_type=code" class="auth-vk">
-            <img src="../static/images/vk-1.svg" width="50" height="50">
+            <img src="{{ url_for('static', filename='images/vk-icon.svg') }}" width="50" height="50">
         </a>
     </div>
 </body>

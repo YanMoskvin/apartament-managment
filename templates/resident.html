@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление жилец</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/resident.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/root.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-menu">
+    <div class="top-menu-container">
+        <img class="top-menu-item logo" src="{{ url_for('static', filename='images/logo.svg') }}">
+        <a class="top-menu-item" href="#">Подать заявку</a>
+        <a class="top-menu-item" href="#">Контроль платежей</a>
+        <a class="top-menu-item" href="/video">Видеонаблюдение</a>
+        <label class="top-menu-item">{{ data['name'] }}</label>
+    </div>
+</div>
+
+<div class="advert">
+    <div class="advert-header">Объявления</div>
+    {% for ad in data['adverts'] %}
+        <div class="advert-item">
+            <label class="advert-item-dscrp">{{ ad.text }}</label>
+            <label class="advert-item-more">Подробнее...</label>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
