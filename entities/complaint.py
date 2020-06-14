@@ -7,6 +7,8 @@ class Complaint(base):
 
     id = Column(Integer, primary_key=True)
     description = Column(String)
-    image_id = Column(String)
     resident_id = Column(String)
     status = Column(String)
+    option_1 = Column(String)
+    option_2 = Column(String)
+    option_3 = Column(String)

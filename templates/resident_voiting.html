@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Объявление</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/resident_voiting.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/root.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="voiting">
+    <div class="voiting-header">Голосование</div>
+
+
+    <div class="voiting-container">
+        <a href="/voiting/voice?data={{ data['vk_id'] }}&option=1&adv_id={{ data['advert'].id }}" class="option-1">{{ data['advert'].option_1 }}</a>
+        <div class="bar bar-1">
+            <div class="strip" style="width: {{ data['percents'][0] }}%">{{ data['percents'][0] }}</div>
+        </div>
+        <a href="/voiting/voice?data={{ data['vk_id'] }}&option=2&adv_id={{ data['advert'].id }}" class="option-2">{{ data['advert'].option_2 }}</a>
+        <div class="bar bar-2">
+            <div class="strip" style="width: {{ data['percents'][1] }}%">{{ data['percents'][1] }}</div>
+        </div>
+        <a href="/voiting/voice?data={{ data['vk_id'] }}&option=3&adv_id={{ data['advert'].id }}" class="option-3">{{ data['advert'].option_3 }}</a>
+        <div class="bar bar-3">
+            <div class="strip" style="width: {{ data['percents'][2] }}%">{{ data['percents'][2] }}</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

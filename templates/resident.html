@@ -15,6 +15,7 @@
         <a class="top-menu-item" href="#">Подать заявку</a>
         <a class="top-menu-item" href="#">Контроль платежей</a>
         <a class="top-menu-item" href="/video">Видеонаблюдение</a>
+        <a class="top-menu-item" href="/marketplace">Маркетплейс</a>
         <label class="top-menu-item">{{ data['name'] }}</label>
     </div>
 </div>
@@ -24,7 +25,9 @@
     {% for ad in data['adverts'] %}
         <div class="advert-item">
             <label class="advert-item-dscrp">{{ ad.text }}</label>
-            <label class="advert-item-more">Подробнее...</label>
+            {% if ad.option_1 != None %}
+                <a href="/voiting?data={{ data['vk_id'] }}&id={{ ad.id }}" class="advert-item-more">Голосование</a>
+            {% endif %}
         </div>
     {% endfor %}
 </div>

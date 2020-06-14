@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="ru">
+        <head>
+            <meta charset="UTF-8">
+            <title>Объявление</title>
+            <link rel="stylesheet" type="text/css"
+                  href="{{ url_for('static', filename='styles/manager_voiting.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/root.css') }}">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        </head>
+<body>
+<div class="voiting">
+    <div class="voiting-header">Голосование</div>
+    
+    <div class="voiting-container">
+        <div class="item option-1">{{ data['advert'].option_1 }}</div>
+        <div class="bar bar-1">
+            <div class="strip" style="width: {{ data['percents'][0] }}%">{{ data['percents'][0] }}</div>
+        </div>
+        <div class="item option-2">{{ data['advert'].option_2 }}</div>
+        <div class="bar bar-2">
+            <div class="strip" style="width: {{ data['percents'][1] }}%">{{ data['percents'][1] }}</div>
+        </div>
+        <div class="item option-3">{{ data['advert'].option_3 }}</div>
+        <div class="bar bar-3">
+            <div class="strip" style="width: {{ data['percents'][2] }}%">{{ data['percents'][2] }}</div>
+        </div>
+    </div>
+</div>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

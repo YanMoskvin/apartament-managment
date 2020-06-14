@@ -9,3 +9,4 @@ class User(base):
     name = Column(String)
     role = Column(String)
     vk_id = Column(String)
+    area = Column(String)

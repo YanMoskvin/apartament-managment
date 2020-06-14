@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.voiting {
+    background: var(--gray-bg-color);
+    width: 600px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 150px;
+    position: relative;
+}
+
+.voiting-header {
+    font-size: 22px;
+    padding: 20px;
+}
+
+.voiting-container {
+    position: absolute;
+    background: #66b3ff;
+    top: 70px;
+    left: 120px;
+}
+
+.item {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    background: var(--gray-black-color);
+    position: absolute;
+    left: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.option-1 {
+    top: 10px;
+}
+
+.option-2 {
+    top: 50px;
+}
+
+.option-3 {
+    top: 90px;
+}
+
+.bar {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    background: var(--gray-black-color);
+    overflow: hidden;
+    left: 120px;
+    position: absolute;
+}
+
+.strip {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.bar-1 {
+    top: 10px;
+}
+
+.bar-2 {
+    top: 50px;
+}
+
+.bar-3 {
+    top: 90px;
+}
+
+.bar-1 .strip {
+    background: #8aff5f;
+}
+
+.bar-2 .strip {
+    background: #ff4a35;
+}
+
+.bar-3 .strip {
+    background: #f9f9f9;
+}

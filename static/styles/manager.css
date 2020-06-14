@@ -75,6 +75,7 @@ body {
     position: absolute;
     right: 20px;
     bottom: 20px;
+    color: black;
 }
 
 .new-advert {
@@ -116,4 +117,40 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     border-radius: 10px;
+}
+
+.new-advert .option-1 {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 370px;
+    height: 25px;
+    outline: none;
+    text-indent: 20px;
+    background: var(--gray-black-color);
+    border: none;
+}
+
+.new-advert .option-2 {
+    position: absolute;
+    top: 340px;
+    left: 50px;
+    width: 370px;
+    height: 25px;
+    outline: none;
+    text-indent: 20px;
+    background: var(--gray-black-color);
+    border: none;
+}
+
+.new-advert .option-3 {
+    position: absolute;
+    top: 380px;
+    left: 50px;
+    width: 370px;
+    height: 25px;
+    outline: none;
+    text-indent: 20px;
+    background: var(--gray-black-color);
+    border: none;
 }

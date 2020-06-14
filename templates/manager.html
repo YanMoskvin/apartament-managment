@@ -24,16 +24,22 @@
         {% for ad in data['adverts'] %}
             <div class="advert-item">
                 <label class="advert-item-dscrp">{{ ad.text }}</label>
-                <label class="advert-item-more">Подробнее...</label>
+                {% if ad.option_1 != None %}
+                    <a href="/voiting/results?data={{ data['vk_id'] }}&id={{ ad.id }}" class="advert-item-more">Голосование</a>
+                {% endif %}
             </div>
         {% endfor %}
     </div>
 
     <div class="new-advert">
-        <textarea class="main" placeholder="Введите текст нового объявления"></textarea>
-        <textarea class="option-1" placeholder="Вариант 1"></textarea>
-        <textarea class="option-2" placeholder="Вариант 2"></textarea>
-        <button type="submit">Опубликовать</button>
+        <form action="/api/adverts/add" method="GET">
+            <textarea name="text" class="main" placeholder="Введите текст нового объявления"></textarea>
+            <input name="option-1" class="option-1" placeholder="Вариант 1">
+            <input name="option-2" class="option-2" placeholder="Вариант 2">
+            <input name="option-3" class="option-3" placeholder="Вариант 3">
+            <input type="hidden" name="vk_id" value="{{ data['vk_id'] }}">
+            <button type="submit">Опубликовать</button>
+        </form>
     </div>
 </div>
 </body>

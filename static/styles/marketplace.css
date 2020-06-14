@@ -3,41 +3,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.top-menu {
-    background: var(--gray-bg-color);
-    width: 100%;
-    height: 70px;
-    text-align: center;
-}
-
-.top-menu-container {
-    display: table;
-    margin: 0 auto;
-}
-
-.top-menu-item {
-    float: left;
-    display: table;
-    width: 230px;
-    height: 70px;
-    line-height: 70px;
-    font-size: 16px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    outline: none;
-}
-
-.top-menu-item.logo {
-    width: 300px;
-    height: 50px;
-    margin-top: 10px;
-}
-
 .advert {
     width: 500px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
     background: var(--gray-bg-color);
     border-radius: 15px;
     padding-bottom: 20px;
