@@ -126,7 +126,21 @@ def voiting_results():
 @app.route('/marketplace')
 def marketplace():
     return render_template('marketplace.html')
+@app.route('/img1')
+def img1():
+    return render_template('co-hu.html')
 
+@app.route('/img2')
+def img2():
+    return render_template('co-me.html')
+
+@app.route('/img3')
+def img3():
+    return render_template('za-hu.html')
+
+@app.route('/img4')
+def img4():
+    return render_template('za-me.html')
 
 if __name__ == '__main__':
     app.run(host=SERVER_HOST, port=SERVER_PORT, debug=True)
