@@ -16,8 +16,11 @@ def index():
 def auth_vk():
     vk_code = request.args['code']
     res = requests.get(
-        "https://oauth.vk.com/access_token?client_id={}&client_secret={}&code={}&redirect_uri=http://{}:{}/api/auth/vk".format(
-            VK_CLIENT_ID, VK_CLIENT_SECRET, vk_code, SERVER_HOST, SERVER_PORT))
+        "https://oauth.vk.com/access_token?client_id={}&client_secret={}&code={}&redirect_uri=http://116.203.105.221/api/auth/vk".format(
+            VK_CLIENT_ID, VK_CLIENT_SECRET, vk_code))
+    # res = requests.get(
+    #     "https://oauth.vk.com/access_token?client_id={}&client_secret={}&code={}&redirect_uri=http://{}:{}/api/auth/vk".format(
+    #         VK_CLIENT_ID, VK_CLIENT_SECRET, vk_code, SERVER_HOST, SERVER_PORT))
     token = json.loads(res.text)
     if 'error' in token:
         return render_template('index.html')
@@ -25,6 +28,7 @@ def auth_vk():
                                                                                                     token[
                                                                                                         'access_token']))
     user_info = json.loads(res.text)['response'][0]
+    print(user_info)
     role = db.get_user(user_info['id']).role
     if role == 'resident':
         return redirect(url_for('resident', data=user_info['id']))
